@@ -1,0 +1,35 @@
+<div class='slds-p-around_small slds-m-around_xx-small currency-converter'>
+
+    <p class='slds-text-heading_small'>{{ 'CURRENCY_CONVERTER.TITLE' | translate }}</p>
+
+    <ng-container>
+        <ng-container>
+            <label class='slds-form-element__label slds-text-body_small slds-p-top_x-small'>{{ 'CURRENCY_CONVERTER.AMOUNT_TITLE' | translate }}</label>
+            <div class='slds-grid align_bottom'>
+                <div class='slds-size_5-of-8'>
+                    <numeric-input (valueChange)='amountValueChange($event)'></numeric-input>
+                </div>
+                <div class='slds-size_3-of-8 slds-p-left_x-small'>
+                    <select-option (optionChange)='amountCurrencyChange($event)' [options]='amountCurrencies'></select-option>
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container>
+            <label class='slds-form-element__label slds-text-body_small slds-p-top_x-small'>{{ 'CURRENCY_CONVERTER.RESULT_TITLE' | translate }}</label>
+            <div class='slds-grid align_bottom'>
+                <div class='slds-size_5-of-8'>
+                    <numeric-input [value]='resultValue' disabled='true'></numeric-input>
+                </div>
+                <div class='slds-size_3-of-8 slds-p-left_x-small'>
+                    <select-option (optionChange)='resultCurrencyChange($event)' [options]='resultCurrencies'></select-option>
+                </div>
+            </div>
+        </ng-container>
+
+        <alert-offline class='slds-p-top_small' *ngIf='apiError' (refresh)='latestCurrencyInformation(amountCurrency)'></alert-offline>
+
+        <tooltip buttonText='CURRENCY_CONVERTER.DISCLAIMER_TITLE' bodyText='CURRENCY_CONVERTER.DISCLAIMER_TEXT'></tooltip>
+
+    </ng-container>
+</div>

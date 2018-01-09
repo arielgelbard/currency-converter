@@ -1,0 +1,11 @@
+{
+    "CURRENCY_CONVERTER" : {
+        "TITLE" : "currency converter",
+        "AMOUNT_TITLE" : "type in amount and select currency:",
+        "INPUT_NUMERIC_PLACEHOLDER" : "0.00",
+        "RESULT_TITLE" : "converted amount:",
+        "DISCLAIMER_TITLE" : "disclaimer",
+        "DISCLAIMER_TEXT" : "Additonal currency rate information",
+        "API_ERROR" : "The currency rates were unavailable. Please try again."
+    }
+}

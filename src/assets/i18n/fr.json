@@ -1,0 +1,11 @@
+{
+    "CURRENCY_CONVERTER" : {
+        "TITLE" : "convertisseur de devises",
+        "AMOUNT_TITLE" : "entrez le montant et sélectionnez la devise:",
+        "INPUT_NUMERIC_PLACEHOLDER" : "0.00",
+        "RESULT_TITLE" : "montant converti:",
+        "DISCLAIMER_TITLE" : "avertissement",
+        "DISCLAIMER_TEXT" : "Informations sur le taux de change supplémentaire",
+        "API_ERROR" : "Les taux de change n'étaient pas disponibles. Veuillez réessayer."
+    }
+}
