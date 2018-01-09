@@ -6,8 +6,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core'
  * Usage:
  * ```typescript
  * <select-option
- * (optionChange)='optionChange($event)' 
- * [options]='options'
+ *  (optionChange)='optionChange($event)' 
+ *  [options]='options'
  * </select-option>
  * ```
  */

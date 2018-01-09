@@ -6,8 +6,8 @@ import { Component, Input } from '@angular/core'
  * Usage:
  * ```typescript
  * <tooltip
- * buttonText='buttonText' 
- * bodyText='bodyText'
+ *  buttonText='buttonText' 
+ *  bodyText='bodyText'
  * </tooltip>
  * ```
  */

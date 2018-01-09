@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
-import CONFIG from '../../app.config'
+import CONFIG from '../../../app.config'
 
 /**
  * Currency Result Object Interface
@@ -24,7 +24,7 @@ interface CurrencyRateObject {
  * Currency Converter Service
  */
 @Injectable()
-export class CurrencyConversionService {
+export class CurrencyConverterService {
 
   /**
    * @hidden

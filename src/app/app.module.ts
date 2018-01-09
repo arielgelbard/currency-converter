@@ -12,10 +12,8 @@ import { NgxCurrencyModule } from 'ngx-currency'
 // Components
 import { AppComponent } from './app.component'
 import { NumericInputComponent, SelectOptionComponent, TooltipComponent, AlertOfflineComponent } from './components/atoms'
-import { CurrencyConverterComponent } from './components/organisms'
-
-// Services
-import { CurrencyConversionService } from './services'
+import { InputSelectComboComponent } from './components/molecules'
+import { CurrencyConverterComponent, CurrencyConverterService } from './components/organisms'
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json')
@@ -28,7 +26,8 @@ export function createTranslateLoader(http: HttpClient) {
     NumericInputComponent,
     SelectOptionComponent,
     TooltipComponent,
-    AlertOfflineComponent
+    AlertOfflineComponent,
+    InputSelectComboComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +42,7 @@ export function createTranslateLoader(http: HttpClient) {
       }
     }),
   ],
-  providers: [CurrencyConversionService],
+  providers: [CurrencyConverterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

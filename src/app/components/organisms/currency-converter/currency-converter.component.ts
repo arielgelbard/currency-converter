@@ -1,5 +1,5 @@
 import { Component, ChangeDetectorRef, AfterViewChecked, Input } from '@angular/core'
-import { CurrencyConversionService, CurrencyResultObject } from '../../../services'
+import { CurrencyConverterService, CurrencyResultObject } from './currency-converter.service'
 import { environment } from '../../../../environments/environment'
 import CONFIG from '../../../app.config'
 /**
@@ -7,7 +7,8 @@ import CONFIG from '../../../app.config'
  *
  * Usage:
  * ```typescript
- * <currency-converter></currency-converter>
+ * <currency-converter>
+ * </currency-converter>
  * ```
  */
 @Component({
@@ -61,7 +62,7 @@ export class CurrencyConverterComponent implements AfterViewChecked {
    * Private modifiers
    */
   constructor( 
-    private currencyConversionService : CurrencyConversionService, 
+    private currencyConverterService : CurrencyConverterService, 
     private changeDetectionRef: ChangeDetectorRef 
   ) { }
 
@@ -107,7 +108,7 @@ export class CurrencyConverterComponent implements AfterViewChecked {
     this.resultCurrency = this.resultCurrencies[0]
 
     // 2) get new currency results
-    this.currencyConversionService.convertCurrency({
+    this.currencyConverterService.convertCurrency({
       base: this.amountCurrency, 
       symbols: this.resultCurrencies.toString()
     }).subscribe(
