@@ -5,7 +5,9 @@ import { Component, Output, EventEmitter } from '@angular/core'
  *
  * Usage:
  * ```typescript
- * <alert-offline (refresh)='refresh($event)'></alert-offline>
+ * <alert-offline 
+ *  (refresh)='refresh($event)'>
+ * </alert-offline>
  * ```
  */
 @Component({

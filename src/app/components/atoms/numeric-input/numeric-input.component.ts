@@ -6,9 +6,9 @@ import CONFIG from '../../../app.config'
  * Usage:
  * ```typescript
  * <numeric-input
- * (valueChange)='valueChange($event)'
- * [value]='value' 
- * disabled='disabled'>
+ *  (valueChange)='valueChange($event)'
+ *  [value]='value' 
+ *  disabled='disabled'>
  * </numeric-input>
  * ```
  */
